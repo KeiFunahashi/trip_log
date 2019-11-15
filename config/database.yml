@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: trip_log_app_sample_production
-  username: trip_log_app_sample
-  password: <%= ENV['SAMPLE_BLOG_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
