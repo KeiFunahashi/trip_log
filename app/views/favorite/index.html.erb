@@ -1,0 +1,15 @@
+<main class="follow-users">
+<div class="left-contents"></div>
+<div class="main-contents">
+<h1>《 Following 》</h1>
+<% @relationships.each do |relationship|%>
+<%= link_to "/profiles/#{relationship.follow.id}" do %>
+<div class="follow-user">
+<div class="profile-img" style="background-image: url(<%= relationship.follow.profileimg %>);"></div>
+<%= simple_format(relationship.follow.nickname) %>
+</div>
+<% end %>
+<% end %>
+</div>
+<div class="right-contents"></div>
+</main>

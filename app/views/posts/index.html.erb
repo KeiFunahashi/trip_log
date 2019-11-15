@@ -1,0 +1,54 @@
+<body>
+  <main class='search-main'>
+    <div class='right-contents'>
+    </div>
+    <div class='main-contents'>
+      <% @posts.each do |post| %>
+        <%= link_to "/profiles/#{post.user_id}" do %>
+        <div class='main-content'>
+        <div class="contents-header">
+          <div class="contributor">
+              <div class="profile-img" style="background-image: url(<%= post.user.profileimg %>);"></div>
+              <%= simple_format(post.user.nickname) %>
+          </div>
+        </div>
+        <% end %>
+                <%= link_to "/posts/#{post.id}" do %>
+        <table class="post-contents">
+            <div class="post-image" style="background-image: url(<%= post.image %>);"></div>
+              <%# <div class="like"><i class="fas fa-heart"></div> %>
+              <%# <div class="comment"><i class="fas fa-comment"></div>
+              <div class="mail"><i class="fas fa-paper-plane"></div> %>
+            <tr class="post-title">
+              <th>
+                <h5>Title</h5>
+              </th>
+              <th>
+                <%= simple_format(post.title) %>
+              </th>
+            </tr>
+            <tr class="post-time">
+              <th>
+                <h5>Time</h5>
+              </th>
+              <th>
+                <%= post.time.strftime("%m/%d %H:%M") %>
+              </th>
+            </tr>
+            <tr  class="post-text">
+              <th>
+                <h5>Place</h5>
+              </th>
+              <th>
+                <%= simple_format(post.place) %>
+              </th>
+            </tr>
+          </table>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class='left-contents'>
+    </div>
+  </main>
+</body>

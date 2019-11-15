@@ -1,0 +1,58 @@
+.bookmarks .main-content {
+    width: 23%;
+    height: 270px;
+    float: left;
+}
+
+.bookmarks .content-header {
+    height: 35px;
+}
+
+.bookmarks .profile-img {
+    height: 30px;
+    width: 30px;
+    margin: 3px 3px;
+    // border: ridge;
+    border-width: 2px;
+    border-color: lightgray;
+}
+
+.bookmarks .contributor {
+    display: flex;
+}
+
+// .bookmarks .contributor p {
+//     font-style: 1px;
+// }
+.bookmarks p {
+    font-size: 1px;
+}
+
+.bookmarks .contributor {
+    margin: 2px;
+}
+
+.bookmarks .post-image {
+    height: 150px;
+}
+
+.bookmarks .post-contents {
+    margin: 0;
+    width: 100%;
+    height: 1px;
+}
+
+.bookmarks .post-contents p {
+    width: 90px;
+}
+
+.bookmarks .post-contents tr {}
+
+.bookmarks .post-contents .content {}
+
+.bookmarks a:hover {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    text-decoration: none;
+}

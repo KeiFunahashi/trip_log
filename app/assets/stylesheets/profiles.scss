@@ -1,0 +1,135 @@
+// Place all the styles related to the profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// .user-show .main-contents {
+//     display: block;
+// }
+.profiles .main-contents {
+    display: block;
+}
+
+.profiles .main-contents .main-content {
+    width: 23%;
+    height: 270px;
+    float: left;
+}
+
+.profiles .main-contents .main-content .post-image {
+    height: 150px;
+}
+
+.profiles .contributor {
+    display: flex;
+}
+
+.success {
+    background-color: white;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.user-title {
+    margin: 10px;
+    font-family: serif;
+    font-size: 30px;
+    color: dimgray;
+}
+
+.log-out-btn {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.profile-contents {
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+    margin: 0 120px;
+}
+
+.profile-img {
+    margin: 30px;
+    width: 180px;
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.profile-content {
+    margin: 30px;
+    line-height: 25px;
+    width: 500px;
+    height: 180px;
+}
+
+.profile-content .profile-name {
+    line-height: 80px;
+    font-size: 40px;
+}
+
+.sign-up-main .main-contents .sign-up-contents {
+    margin: 50px;
+    line-height: 25px;
+}
+
+.sign-up-contents input {
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+    margin: 10px;
+}
+
+.sign-up-contents #user_remember_me {
+    width: 20px;
+}
+
+.sign-up-contents label {
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+    margin: 10px;
+}
+
+.edit-btn {
+    float: right;
+}
+
+.profiles .post-contents {
+    margin: 0;
+    width: 100%;
+    height: 1px;
+}
+
+.profiles .post-contents p {
+    width: 90px;
+}
+
+.profiles p {
+    font-size: 1px;
+}
+
+.profiles .contents-header {
+    height: 40px;
+}
+
+// .profile-name {
+//     display: flex;
+//     justify-content: space-between;
+// }
+.btn-block {
+    height: 25px;
+    width: 75px;
+    border-radius: 5px;
+    background-color: #1da1f2;
+    color: #fff;
+    font-weight: bold;
+    border-color: #1da1f2;
+}
+
+.btn-block :hover {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    text-decoration: none;
+}

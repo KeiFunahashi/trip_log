@@ -1,0 +1,70 @@
+<main class="profiles">
+<div class="left-contents">
+</div>
+  <div class='main-contents'>
+      <div class="profile-contents">
+                <div class="profile-img" style="background-image: url(<%= @users.profileimg %>);">
+                </div>
+                  <div class="profile-content">
+                    <div class="profile-name">
+                      <%= @users.nickname %>
+                    </div>
+                    <span class="profile-from">
+                      <%= @users.from %>
+                    </span>
+                    <span class="profile-age">
+                      <%= @users.age %>
+                    </span>
+                    <div class="profile-introduction">
+                      <%= @users.introduction %>
+                    </div>
+                    <div class="follow-btn">
+                      <%= render partial: "relationships/follow_button", locals: { user: @users } %>
+                    </div>
+
+                  </div>
+      </div>
+            <% @posts.each do |post| %>
+        <%= link_to "/posts/#{post.id}" do %>
+        <div class='main-content'>
+        <div class="contents-header">
+          <div class="contributor">
+              <%= simple_format(post.user.nickname) %>
+          </div>
+        </div>
+        <table class="post-contents">
+            <div class="post-image" style="background-image: url(<%= post.image %>);"></div>
+            <tr class="post-title">
+              <th>
+                <p>Title</p>
+              </th>
+              <th>
+                <%= simple_format(post.title) %>
+              </th>
+            </tr>
+            <tr class="post-time">
+              <th>
+                <p>Time</p>
+              </th>
+              <th>
+              <p>
+                <%= post.time.strftime("%m/%d %H:%M") %>
+              </p>
+              </th>
+            </tr>
+            <tr  class="post-text">
+              <th>
+                <p>Place</p>
+              </th>
+              <th>
+                <%= simple_format(post.place) %>
+              </th>
+            </tr>
+          </table>
+        </div>
+        <% end %>
+      <% end %>
+</div>
+<div class="right-contents">
+</div>
+</main>

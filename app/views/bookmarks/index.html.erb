@@ -1,0 +1,48 @@
+<main class="bookmarks">
+<div class="left-contents"></div>
+<div class="main-contents">
+      <% @user.bookmarks.each do |bookmark| %>
+      <%= link_to "/posts/#{bookmark.post.id}" do %>
+        <div class='main-content'>
+        <div class="contents-header">
+          <div class="contributor">
+              <div class="profile-img" style="background-image: url(<%= bookmark.post.user.profileimg %>);"></div>
+              <%= simple_format(bookmark.post.user.nickname) %>
+          </div>
+        </div>
+        <table class="post-contents">
+            <div class="post-image" style="background-image: url(<%= bookmark.post.image %>);"></div>
+            <tr class="post-title">
+              <th>
+                <p class="content">Title</p>
+              </th>
+              <th>
+                <%= simple_format(bookmark.post.title) %>
+              </th>
+            </tr>
+            <tr class="post-time">
+              <th>
+                <p class="content">Time</p>
+              </th>
+              <th>
+              <p>
+                <%= bookmark.post.time.strftime("%m/%d %H:%M") %>
+                </p>
+              </th>
+            </tr>
+            <tr  class="post-text">
+              <th>
+                <p class="content">Place</p>
+              </th>
+              <th>
+                <%= simple_format(bookmark.post.place) %>
+              </th>
+            </tr>
+          </table>
+        </div>
+              <% end %>
+      <% end %>
+</div>
+<div class="right-contents"></div>
+</main>
+

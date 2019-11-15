@@ -1,0 +1,196 @@
+.posts-new {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    // margin-left: 450px;
+}
+
+.form {
+    text-align: center;
+}
+
+.form .new_post div {
+    margin: 10px;
+}
+
+#post_title {
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+}
+
+#post_place {
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+}
+
+#post_image {
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+}
+
+#post_text {
+    border-radius: 5px;
+    width: 400px;
+    height: 300px;
+    border-width: 2px;
+    border-style: inset;
+}
+
+.new_post-title {
+    margin: 35px 10px 0;
+    font-family: serif;
+    font-size: 30px;
+    color: dimgray;
+}
+
+.date-select {
+    border: none;
+    font-size: 20px;
+    height: 40px;
+    width: 60px;
+}
+
+#post_time_1i {
+    width: 80px;
+}
+
+.form-btn {
+    font-size: 15px;
+}
+
+.form-btn input {
+    font-size: 15px;
+    width: 100px;
+    border: outset;
+    border-width: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+::placeholder {
+    font-size: 15px;
+}
+
+.search-main .profile-img {
+    height: 30px;
+    width: 30px;
+    margin: 3px 3px;
+    // border: ridge;
+    border-width: 2px;
+    border-color: lightgray;
+}
+
+.search-main .contributor {
+    display: flex;
+}
+
+.post-img {
+    height: 585px;
+    margin-left: auto;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-title {
+    margin-top: 30px;
+    font-size: 30px;
+    width: 100%;
+}
+
+.more {
+    margin: 50px;
+}
+
+.more p {
+    margin: auto;
+    line-height: 25px;
+}
+
+.more_list li {
+    margin: 10px;
+}
+
+.bookmark-btn {
+    display: inline-grid;
+    margin: 10px 0;
+}
+
+.bookmark-btn a {
+    font-size: 20px;
+}
+
+.search-main .contents-header {
+    width: 738px;
+}
+
+.contents-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-main .main-contents {
+    display: flex;
+}
+
+.post-image {
+    height: 370px;
+    background-size: cover;
+    background-position: center;
+}
+
+.contributor {
+    margin: 10px;
+}
+
+.contributor p {
+    font-size: 20px;
+}
+
+.content-btn {
+    border-radius: 5%;
+    font-size: 15px;
+    margin: 15px;
+    height: 30px;
+}
+
+h5 {
+    width: 250px;
+}
+
+.post-contents {
+    text-align: center;
+    margin: 35px;
+    height: 124px;
+}
+
+.post-contents p {
+    width: 404px;
+}
+
+.edit_user {
+    margin: 20px;
+}
+
+.field {
+    margin: 15px;
+}
+
+.edit_user input {
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+}
+
+#user_introduction {
+    height: 300px;
+}
+
+.user-edit-label {
+    font-size: 35px;
+    margin: 20px;
+}

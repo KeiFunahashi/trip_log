@@ -1,0 +1,73 @@
+<main class="user-show">
+    <div class='right-contents'>
+      <p class="user-title"><%= @nickname %>'s Posts</p>
+    </div>
+    <div class='contents row main-contents'>
+      <div class="profile-contents">
+        <div class="profile-img" style="background-image: url(<%= @profileimg %>);">
+        </div>
+        <div class="profile-content">
+          <div class="edit-btn">
+            <a href="/users/edit"><i class="fas fa-cog"></i></a>
+          </div>
+          <div class="profile-name">
+            <%= @nickname %>
+          </div>
+          <span class="profile-from">
+            <%= @from %>
+          </span>
+          <span class="profile-age">
+            <%= @age %>
+          </span>
+          <div class="profile-introduction">
+            <%= @introduction %>
+          </div>
+        </div>
+      </div>
+      <% @posts.each do |post| %>
+      <%= link_to "/posts/#{post.id}" do %>
+        <div class='main-content'>
+        <div class="contents-header">
+          <div class="contributor">
+              <%= simple_format(post.user.nickname) %>
+          </div>
+        </div>
+        <table class="post-contents">
+            <div class="post-image" style="background-image: url(<%= post.image %>);"></div>
+            <tr class="post-title">
+              <th>
+                <p>Title</p>
+              </th>
+              <th>
+                <%= simple_format(post.title) %>
+              </th>
+            </tr>
+            <tr class="post-time">
+              <th>
+                <p>Time</p>
+              </th>
+              <th>
+              <p>
+                <%= post.time.strftime("%m/%d %H:%M") %>
+                </p>
+              </th>
+            </tr>
+            <tr  class="post-text">
+              <th>
+                <p>Place</p>
+              </th>
+              <th>
+                <%= simple_format(post.place) %>
+              </th>
+            </tr>
+          </table>
+        </div>
+      <% end %>
+            <% end %>
+    </div>
+        <div class='left-contents'>
+          <div class="log-out-btn">
+         <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+          </div>
+        </div>
+</main>

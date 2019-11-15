@@ -1,0 +1,52 @@
+<main>
+<div class="left-contents">aaa</div>
+<div class="main-contents">
+      <% @posts.each do |post| %>
+                  <%= link_to "/posts/#{post.id}" do %>
+        <div class='main-content'>
+        <div class="contents-header">
+          <div class="contributor">
+              <%= simple_format(post.user.nickname) %>
+          </div>
+        </div>
+        <table class="post-contents">
+            <div class="post-image" style="background-image: url(<%= post.image %>);"></div>
+            <tr class="post-title">
+              <th>
+                <p>Title</p>
+              </th>
+              <th>
+                <%= simple_format(post.title) %>
+              </th>
+            </tr>
+            <tr class="post-person">
+              <th>
+                <p>Contributor</p>
+              </th>
+              <th>
+                <%= simple_format(post.user.nickname) %>
+              </th>
+            </tr>
+            <tr class="post-time">
+              <th>
+                <p>Time</p>
+              </th>
+              <th>
+                <%= post.time.strftime("%m/%d %H:%M") %>
+              </th>
+            </tr>
+            <tr  class="post-text">
+              <th>
+                <p>Place</p>
+              </th>
+              <th>
+                <%= simple_format(post.place) %>
+              </th>
+            </tr>
+          </table>
+        </div>
+        <% end %>
+      <% end %>
+</div>
+<div class="right-contents">sss</div>
+</main>
