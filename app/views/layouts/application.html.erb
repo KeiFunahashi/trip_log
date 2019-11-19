@@ -36,12 +36,14 @@
       </div>
     </header>
     <%= yield %>
+      <% if user_signed_in? %>
     <footer class='footer'>
       <a href="/" class='footer-btn'><i class="fas fa-search"></i></a>
       <a href="/posts/new" class='footer-btn'><i class="fas fa-pen-nib"></i></a>
       <a href="/favorite" class='footer-btn'><i class="fas fa-star"></i></a>
       <a href="/bookmarks" class='footer-btn'><i class="fas fa-book-open"></i></a>
     </footer>
+      <% end %>
     </div>
   </body>
 </html>
