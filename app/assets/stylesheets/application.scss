@@ -14,20 +14,18 @@
  *= require_self
  */
 
-@import "reset";
-@import "bookmarks";
-@import "favorite";
-@import "new-user-registration";
-@import "posts";
-@import "profiles";
-@import "relationships";
-@import "users";
 * {
     padding: 0;
     // color: black;
     font-style: italic;
     font-family: serif;
     color: darkgray;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
 }
 
 ::-webkit-scrollbar {
@@ -35,56 +33,61 @@
 }
 
 main {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
-    margin-bottom: 50px;
-    width: 100%;
+    width: 680px;
+    margin: 0 auto;
     text-align: center;
+    background-color: #fafafa;
+    overflow: scroll;
+    height: calc(100% - 130px);
 }
 
 .main-contents {
-    overflow: scroll;
-    background-color: rgb(250, 250, 250);
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
 }
 
 .main-content {
     border: groove;
     border-width: 2px;
     border-color: lightgray;
-    margin: 20px 55px;
+    margin-top: 20px;
     // width: 300px;
-    // height: 150px;
+    height: auto;
 }
 
 .wrapper {
-    display: flex;
     height: 100vh;
-    position: relative;
 }
 
 .header {
-    position: absolute;
     background-color: white;
     height: 80px;
     width: 100%;
 }
 
 .header__bar {
-    height: 100%;
     display: flex;
     justify-content: space-between;
+    height: 100%;
+    text-align: center;
+}
+
+.app-name {
+    width: 25%;
+    height: 100%;
+    font-weight: bold;
+    // font-size: 40px;
+    color: black;
+}
+
+.search-box {
+    width: 50%;
+    height: 100%;
 }
 
 .search-input {
     border-radius: 5px;
-    width: 400px;
     height: 30px;
-}
-
-.search-box {
-    margin: 20px;
 }
 
 .search-btn {
@@ -97,24 +100,17 @@ main {
     border-style: groove;
 }
 
-.app-name {
-    font-weight: bold;
-    margin: 15px 50px;
-    font-size: 40px;
-    color: black;
-}
-
 .user-name {
+    height: 100%;
+    width: 25%;
     font-weight: bold;
-    margin: 15px 50px;
-    font-size: 40px;
-    // color: black;
+    // font-size: 40px;
 }
 
 .footer {
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    align-items: center;
     background-color: white;
     height: 50px;
     width: 100%;
@@ -125,7 +121,6 @@ main {
     width: 100%;
     font-size: 40px;
     text-align: center;
-    margin-top: 8px;
 }
 
 ::before {}
@@ -155,13 +150,6 @@ a {
     text-align: center;
 }
 
-.grid-6 {
-    font-weight: bold;
-    margin: 15px 50px;
-    font-size: 40px;
-    color: black;
-}
-
 div.contents.row {
     h2 {
         font-weight: normal;
@@ -176,21 +164,10 @@ div.contents.row {
     }
 }
 
-.right-contents {
-    background-color: rgb(240, 240, 240);
-    width: 200px;
-}
-
-.left-contents {
-    background-color: rgb(240, 240, 240);
-    width: 200px;
-}
-
-p {
-    margin: 8px;
-    font-family: serif;
-}
-
+// p {
+//     margin: 8px;
+//     font-family: serif;
+// }
 button {
     padding: 1px 10px;
 }

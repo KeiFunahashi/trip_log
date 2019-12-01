@@ -9,13 +9,16 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/a52789246b.js" crossorigin="anonymous"></script>
     <%# <link rel="stylesheet" type="text/css" href="assets/stylesheets/reset.css"> %>
+    <%# <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /> %>
   </head>
 
   <body>
   <div class='wrapper'>
     <header class="header">
-          <div class="header__bar">
-        <h1 class="app-name"><a href="/">app</a></h1>
+      <div class="header__bar">
+        <div class="app-name">
+        <%=link_to "app",root_path,class:"app-name-link" %>
+        </div>
         <div class="search-box">
         <% if user_signed_in? %>
           <%= form_with(url:  search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
@@ -24,7 +27,7 @@
         <% end %>
         </div>
         <% if user_signed_in? %>
-          <div class="user-name grid-6">
+          <div class="user-name">
             <%= link_to "#{current_user.nickname}", "/users/#{current_user.id}" %>
           </div>
         <% else %>

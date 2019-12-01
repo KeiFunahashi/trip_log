@@ -1,6 +1,6 @@
 .posts-new {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     margin-top: 80px;
     margin-bottom: 50px;
     // margin-left: 450px;
@@ -16,26 +16,26 @@
 
 #post_title {
     border-radius: 5px;
-    width: 400px;
-    height: 30px;
+    // width: 400px;
+    // height: 30px;
 }
 
 #post_place {
     border-radius: 5px;
-    width: 400px;
-    height: 30px;
+    // width: 400px;
+    // height: 30px;
 }
 
 #post_image {
     border-radius: 5px;
-    width: 400px;
-    height: 30px;
+    // width: 400px;
+    // height: 30px;
 }
 
 #post_text {
     border-radius: 5px;
-    width: 400px;
-    height: 300px;
+    // width: 400px;
+    // height: 300px;
     border-width: 2px;
     border-style: inset;
 }
@@ -51,11 +51,10 @@
     border: none;
     font-size: 20px;
     height: 40px;
-    width: 60px;
 }
 
 #post_time_1i {
-    width: 80px;
+    // width: 80px;
 }
 
 .form-btn {
@@ -75,17 +74,15 @@
     font-size: 15px;
 }
 
-.search-main .profile-img {
-    height: 30px;
-    width: 30px;
-    margin: 3px 3px;
-    // border: ridge;
-    border-width: 2px;
-    border-color: lightgray;
-}
-
+// .search-main .profile-img {
+//     width: 30%;
+//     border-width: 2px;
+//     border-color: lightgray;
+// }
 .search-main .contributor {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .post-img {
@@ -124,31 +121,41 @@
     font-size: 20px;
 }
 
-.search-main .contents-header {
-    width: 738px;
-}
-
+// .search-main .contents-header {
+//     width: 738px;
+// }
 .contents-header {
-    display: flex;
-    justify-content: space-between;
+    height: 50px;
 }
 
-.search-main .main-contents {
-    display: flex;
+.contributor {
+    .profile-img {
+        width: 8%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        margin: 0 10px;
+    }
+    p {
+        width: 30%;
+    }
 }
+
+.search-main .main-contents {}
 
 .post-image {
-    height: 370px;
+    height: 250px;
     background-size: cover;
     background-position: center;
 }
 
-.contributor {
-    margin: 10px;
-}
-
+// .contributor {
+//     margin: 10px;
+// }
 .contributor p {
     font-size: 20px;
+    height: fit-content;
 }
 
 .content-btn {
@@ -159,19 +166,20 @@
 }
 
 h5 {
-    width: 250px;
+    // width: 250px;
 }
 
 .post-contents {
-    text-align: center;
-    margin: 35px;
-    height: 124px;
+    width: 90%;
+    margin: 10px auto;
+    table-layout: fixed;
+    tr {
+        margin: 5px auto;
+    }
 }
 
-.post-contents p {
-    width: 404px;
-}
-
+// .post-contents p {
+// }
 .edit_user {
     margin: 20px;
 }

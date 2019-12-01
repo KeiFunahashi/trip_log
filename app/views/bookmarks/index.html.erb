@@ -1,5 +1,4 @@
 <main class="bookmarks">
-<div class="left-contents"></div>
 <div class="main-contents">
       <% @user.bookmarks.each do |bookmark| %>
       <%= link_to "/posts/#{bookmark.post.id}" do %>
@@ -43,6 +42,5 @@
               <% end %>
       <% end %>
 </div>
-<div class="right-contents"></div>
 </main>
 
