@@ -1,5 +1,7 @@
-<main>
-  <div class='right-contents'>
+<main class="show-main">
+  <div class='main-contents'>
+
+  <div class='show-content'>
     <div class="content-title">
           <%= simple_format(@post.title) %>
     </div>
@@ -14,17 +16,16 @@
           <% end %>
         <% end %>
       </div>
-  </div>
-  <div class='main-contents'>
+
+
+
   <div class="detail-content">
     <div class="post-img" style="background-image: url(<%= @post.image %>);"></div>
       <div class="more">
         <%= simple_format(@post.text) %>
       </div>
       </div>
-    </div>
-  <div class='left-contents'>
-    <ul class="more_list">
+          <ul class="more_list">
       <li>
         <%= link_to 'Edit', "/posts/#{@post.id}/edit", method: :get %>
       </li>
@@ -33,4 +34,5 @@
       </li>
     </ul>
 </div>
+    </div>
 </main>

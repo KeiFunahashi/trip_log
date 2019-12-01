@@ -1,129 +1,10 @@
-.posts-new {
-    // display: flex;
-    // justify-content: space-between;
-    margin-top: 80px;
-    margin-bottom: 50px;
-    // margin-left: 450px;
-}
-
-.form {
-    text-align: center;
-}
-
-.form .new_post div {
-    margin: 10px;
-}
-
-#post_title {
-    border-radius: 5px;
-    // width: 400px;
-    // height: 30px;
-}
-
-#post_place {
-    border-radius: 5px;
-    // width: 400px;
-    // height: 30px;
-}
-
-#post_image {
-    border-radius: 5px;
-    // width: 400px;
-    // height: 30px;
-}
-
-#post_text {
-    border-radius: 5px;
-    // width: 400px;
-    // height: 300px;
-    border-width: 2px;
-    border-style: inset;
-}
-
-.new_post-title {
-    margin: 35px 10px 0;
-    font-family: serif;
-    font-size: 30px;
-    color: dimgray;
-}
-
-.date-select {
-    border: none;
-    font-size: 20px;
-    height: 40px;
-}
-
-#post_time_1i {
-    // width: 80px;
-}
-
-.form-btn {
-    font-size: 15px;
-}
-
-.form-btn input {
-    font-size: 15px;
-    width: 100px;
-    border: outset;
-    border-width: 2px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-::placeholder {
-    font-size: 15px;
-}
-
-// .search-main .profile-img {
-//     width: 30%;
-//     border-width: 2px;
-//     border-color: lightgray;
-// }
+// ------------indexページ-------------
 .search-main .contributor {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.post-img {
-    height: 585px;
-    margin-left: auto;
-    margin-bottom: 15px;
-    background-size: cover;
-    background-position: center;
-}
-
-.content-title {
-    margin-top: 30px;
-    font-size: 30px;
-    width: 100%;
-}
-
-.more {
-    margin: 50px;
-}
-
-.more p {
-    margin: auto;
-    line-height: 25px;
-}
-
-.more_list li {
-    margin: 10px;
-}
-
-.bookmark-btn {
-    display: inline-grid;
-    margin: 10px 0;
-}
-
-.bookmark-btn a {
-    font-size: 20px;
-}
-
-// .search-main .contents-header {
-//     width: 738px;
-// }
 .contents-header {
     height: 50px;
 }
@@ -139,34 +20,9 @@
     }
     p {
         width: 30%;
+        font-size: 20px;
+        height: fit-content;
     }
-}
-
-.search-main .main-contents {}
-
-.post-image {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-}
-
-// .contributor {
-//     margin: 10px;
-// }
-.contributor p {
-    font-size: 20px;
-    height: fit-content;
-}
-
-.content-btn {
-    border-radius: 5%;
-    font-size: 15px;
-    margin: 15px;
-    height: 30px;
-}
-
-h5 {
-    // width: 250px;
 }
 
 .post-contents {
@@ -178,8 +34,111 @@ h5 {
     }
 }
 
-// .post-contents p {
-// }
+.post-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+// ----------投稿ページ----------
+.posts-new {
+    .main-contents {
+        height: auto;
+        margin: 10px auto;
+        h3 {
+            font-size: 25px;
+        }
+        .new_post-title {
+            font-size: 30px;
+            color: dimgray;
+            height: fit-content;
+        }
+    }
+}
+
+.form {
+    height: auto;
+    border-radius: 5px;
+    div {
+        margin-top: 20px;
+        input {
+            border-radius: 5px;
+        }
+    }
+    .date-select {
+        border: none;
+        font-size: 20px;
+        height: 40px;
+        width: 15%;
+    }
+    .box {
+        height: 40px;
+    }
+    #post_text {
+        border-radius: 5px;
+        border-width: 2px;
+        border-style: inset;
+    }
+    .form-btn {
+        font-size: 15px;
+    }
+    .form-btn input {
+        font-size: 15px;
+        width: 100px;
+        border: outset;
+        border-width: 2px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+     ::placeholder {
+        font-size: 15px;
+    }
+}
+
+// ---------- 詳細ページ----------
+.content-title {
+    font-size: 30px;
+}
+
+.show-content {
+    margin: 10px auto;
+    height: fit-content;
+}
+
+.post-img {
+    height: 250px;
+    margin-left: auto;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+}
+
+.more p {
+    margin: auto;
+    line-height: 25px;
+}
+
+.more_list li {
+    margin-top: 10px;
+}
+
+.bookmark-btn {
+    display: inline-grid;
+    margin: 10px 0;
+}
+
+.bookmark-btn a {
+    font-size: 20px;
+    text-align: right;
+}
+
+.content-btn {
+    border-radius: 5%;
+    font-size: 15px;
+    margin: 15px;
+    height: 30px;
+}
+
 .edit_user {
     margin: 20px;
 }
@@ -206,8 +165,4 @@ h5 {
 .success {
     margin-top: 35px;
     line-height: 40px;
-}
-
-h3 {
-    font-size: 25px;
 }
