@@ -20,7 +20,6 @@
     font-style: italic;
     font-family: serif;
     color: darkgray;
-    height: 100%;
     width: 100%;
 }
 
@@ -44,6 +43,7 @@ main {
 .main-contents {
     margin: 0 auto;
     width: 90%;
+    height: fit-content;
 }
 
 .main-content {

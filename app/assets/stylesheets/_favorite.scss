@@ -1,31 +1,38 @@
-.follow-users h1 {
-    font-size: 50px;
-    margin: 20px 20px 0;
-    color: dimgray;
+.follow-users {
+    h1 {
+        font-size: 50px;
+        color: dimgray;
+        height: fit-content;
+        margin: 20px 0;
+    }
+    .main-contents {
+        width: 60%;
+    }
 }
 
 .follow-users p {
     font-size: 35px;
-    padding: 50px 50px;
-    // margin-right: 50px;
-    text-align: center;
+    width: 50%;
+    height: fit-content;
 }
 
 .follow-users .profile-img {
-    width: 100px;
+    width: 50px;
+    height: 50px;
     background-size: cover;
     background-position: center;
-    height: 100px;
     border-radius: 50%;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 .follow-users .follow-user {
     display: flex;
     justify-content: space-between;
-    margin: 20px 300px;
+    align-items: center;
     border: outset;
     border-width: 2px;
+    height: 80px;
+    margin-top: 20px;
 }
 
 .follow-users a:hover {

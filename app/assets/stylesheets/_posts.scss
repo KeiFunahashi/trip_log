@@ -1,27 +1,28 @@
 // ------------indexページ-------------
-.search-main .contributor {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .contents-header {
     height: 50px;
 }
 
-.contributor {
-    .profile-img {
-        width: 8%;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-radius: 50%;
-        margin: 0 10px;
-    }
-    p {
-        width: 30%;
-        font-size: 20px;
-        height: fit-content;
+.search-main {
+    .contributor {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .profile-img {
+            height: 40px;
+            width: 40px;
+            background-size: 40px;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            margin: 5px 10px;
+        }
+        p {
+            width: 30%;
+            font-size: 20px;
+            height: fit-content;
+        }
     }
 }
 
@@ -63,6 +64,7 @@
         margin-top: 20px;
         input {
             border-radius: 5px;
+            height: 100%;
         }
     }
     .date-select {
@@ -96,13 +98,14 @@
 }
 
 // ---------- 詳細ページ----------
-.content-title {
-    font-size: 30px;
-}
-
-.show-content {
-    margin: 10px auto;
-    height: fit-content;
+.show-main {
+    .show-content {
+        margin: 10px auto;
+        height: fit-content;
+        .content-title {
+            font-size: 30px;
+        }
+    }
 }
 
 .post-img {
@@ -139,6 +142,7 @@
     height: 30px;
 }
 
+// ---------- 編集ページ----------
 .edit_user {
     margin: 20px;
 }
