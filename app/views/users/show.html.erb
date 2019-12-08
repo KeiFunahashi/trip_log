@@ -1,6 +1,54 @@
 <main class="user-show">
-    <div class='right-contents'>
+    <div class='left-contents'>
       <p id="user-title"><%= @nickname %>'s Posts</p>
+                <div class="log-out-btn">
+         <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+          </div>
+            <div class='side-bar'>
+  <ul>
+    <li>
+    <p>About</p>
+   </li>
+    <li>
+    <p>Recomendation</p>
+    </li>
+    <li>
+    <p>News</p>
+    </li>
+    <li>
+    <p>Information</p>
+    </li>
+    <li>
+    <p>Contact</p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+
+  </ul>
+  </div>
+
     </div>
     <div class='contents row main-contents'>
       <div class="profile-contents">
@@ -65,9 +113,4 @@
       <% end %>
             <% end %>
     </div>
-        <div class='left-contents'>
-          <div class="log-out-btn">
-         <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-          </div>
-        </div>
 </main>

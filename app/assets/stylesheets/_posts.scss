@@ -1,9 +1,28 @@
 // ------------indexページ-------------
+.image {
+    background-color: black;
+}
+
 .contents-header {
     height: 50px;
 }
 
+.search-box {
+    margin: 30px auto;
+    margin-top: 50px;
+}
+
 .search-main {
+    display: flex;
+    .main-contents {
+        background-image: url(coffee.jpg);
+        background-repeat: no-repeat;
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 10px auto;
+        }
+    }
     .contributor {
         height: 100%;
         display: flex;
@@ -19,30 +38,30 @@
             margin: 5px 10px;
         }
         p {
-            width: 30%;
+            width: 50%;
             font-size: 20px;
             height: fit-content;
         }
     }
-}
-
-.post-contents {
-    width: 90%;
-    margin: 10px auto;
-    table-layout: fixed;
-    tr {
-        margin: 5px auto;
+    .post-contents {
+        width: 90%;
+        margin: 10px auto;
+        table-layout: fixed;
+        tr {
+            margin: 5px auto;
+        }
     }
 }
 
 .post-image {
-    height: 250px;
+    height: 200px;
     background-size: cover;
     background-position: center;
 }
 
 // ----------投稿ページ----------
 .posts-new {
+    width: 70%;
     .main-contents {
         height: auto;
         margin: 10px auto;

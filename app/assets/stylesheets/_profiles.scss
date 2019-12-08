@@ -6,6 +6,7 @@
 // }
 .profiles .main-contents {
     display: block;
+    width: 70%;
 }
 
 .profiles .main-contents .main-content {
@@ -34,20 +35,22 @@
     margin-top: 20px;
 }
 
-.profile-contents {
-    display: flex;
-    justify-content: space-between;
-    height: 300px;
-    margin: 0 120px;
-}
-
-.profiles.profile-img {
-    margin: 30px;
-    width: 180px;
-    background-size: cover;
-    background-position: center;
-    height: 180px;
-    border-radius: 50%;
+// .profile-contents {
+//     display: flex;
+//     justify-content: space-between;
+//     height: 300px;
+//     margin: 0 120px;
+// }
+.profiles {
+    .profile-img {
+        margin: 30px;
+        width: 180px;
+        background-size: cover;
+        background-position: center;
+        height: 180px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+    }
 }
 
 .profile-content {

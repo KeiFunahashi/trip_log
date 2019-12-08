@@ -1,5 +1,67 @@
+<div class="image">
+<%= image_tag 'plane_night.jpg'%>
+</div>
+<div class="search-box">
+  <%= form_with(url:  search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "Search", class: "search-input" %>
+<% end %>
+</div>
+    <div class='serect'>
+      <a href="/" class='footer-btn'><i class="fas fa-search"></i></a>
+      <a href="/posts/new" class='footer-btn'><i class="fas fa-pen-nib"></i></a>
+      <a href="/favorite" class='footer-btn'><i class="fas fa-star"></i></a>
+      <a href="/bookmarks" class='footer-btn'><i class="fas fa-book-open"></i></a>
+    </div>
+
   <main class='search-main'>
+  <div class='left-contents'>
+  <div class='side-bar'>
+  <ul>
+    <li>
+    <p>About</p>
+   </li>
+    <li>
+    <p>Recomendation</p>
+    </li>
+    <li>
+    <p>News</p>
+    </li>
+    <li>
+    <p>Information</p>
+    </li>
+    <li>
+    <p>Contact</p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+    <li>
+    <p></p>
+    </li>
+
+  </ul>
+  </div>
+  </div>
     <div class='main-contents'>
+    <h2>＜ ALL TRIPS ＞</h2>
       <% @posts.each do |post| %>
         <div class='main-content'>
           <%= link_to "/profiles/#{post.user_id}" do %>

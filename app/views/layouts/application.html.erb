@@ -8,23 +8,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/a52789246b.js" crossorigin="anonymous"></script>
-    <%# <link rel="stylesheet" type="text/css" href="assets/stylesheets/reset.css"> %>
-    <%# <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /> %>
-  </head>
-
+    <%# <meta name=viewport content="width=device-width, initial-scale=1">  </head> %>
   <body>
   <div class='wrapper'>
     <header class="header">
       <div class="header__bar">
         <div class="app-name">
-        <%=link_to "app",root_path,class:"app-name-link" %>
-        </div>
-        <div class="search-box">
-        <% if user_signed_in? %>
-          <%= form_with(url:  search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
-            <%= form.text_field :keyword, placeholder: "Search", class: "search-input" %>
-          <% end %>
-        <% end %>
+        <%=link_to "Trip Log",root_path,class:"app-name-link" %>
         </div>
         <% if user_signed_in? %>
           <div class="user-name">
@@ -39,14 +29,10 @@
       </div>
     </header>
     <%= yield %>
-      <% if user_signed_in? %>
-    <footer class='footer'>
-      <a href="/" class='footer-btn'><i class="fas fa-search"></i></a>
-      <a href="/posts/new" class='footer-btn'><i class="fas fa-pen-nib"></i></a>
-      <a href="/favorite" class='footer-btn'><i class="fas fa-star"></i></a>
-      <a href="/bookmarks" class='footer-btn'><i class="fas fa-book-open"></i></a>
-    </footer>
-      <% end %>
+    <footer></footer>
+    <div class="image-message">
+      <h1>Have wonderful memories</h1>
+    </div>
     </div>
   </body>
 </html>
