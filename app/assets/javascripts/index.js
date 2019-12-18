@@ -6,4 +6,10 @@ $(document).on('turbolinks:load', function() {
             arrows: true,
         });
     });
+
+    $(function() {
+        $('#nav-toggle').click(function() {
+            $('body').toggleClass('open');
+        });    
+    });
 });
