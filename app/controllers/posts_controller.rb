@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :move_to_index, except: :index
 
 def index
-  @posts = Post.all.order("time DESC")
+  @posts = Post.all.order("time DESC").page(params[:page]).per(12)
 end
 
 def new

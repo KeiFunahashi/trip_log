@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+### ユーザー登録
+### 投稿機能
+### 検索機能
+### slickスライドショー
+### ハンバーガーメニュー
+### follow機能
+### ブックマーク（いいね）機能
