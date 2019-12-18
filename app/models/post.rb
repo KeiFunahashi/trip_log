@@ -3,6 +3,7 @@ class Post < ApplicationRecord
 has_many :bookmarks
 has_many :users, through: :bookmarks
 belongs_to :user
+belongs_to :post
 
   def self.search(search)
     return Post.all unless search
