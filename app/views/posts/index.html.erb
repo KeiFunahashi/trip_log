@@ -79,7 +79,8 @@
   </div>
   </div>
     <div class='main-contents'>
-    <h2>＜ ALL TRIPS ＞</h2>
+    <h2 class="contnts_title">＜ ALL TRIPS ＞</h2>
+    <div class="contents">
       <% @posts.each do |post| %>
         <div class='main-content'>
           <%= link_to "/profiles/#{post.user_id}" do %>
@@ -121,5 +122,7 @@
           <% end %>
         </div>
       <% end %>
+      </div>
+      <%= paginate(@posts) %>
     </div>
   </main>
