@@ -1,6 +1,8 @@
-<div class="image">
-<%= image_tag 'plane_night.jpg'%>
-</div>
+<ul class="slider">
+<li><%= image_tag 'plane_night.jpg', size: '700x700' %></li>
+<li><%= image_tag 'road.jpg', size: '700x700' %></li>
+<li><%= image_tag 'beach.jpg', size: '700x700' %></li>
+</ul>
 <div class="search-box">
   <%= form_with(url:  search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
     <%= form.text_field :keyword, placeholder: "Search", class: "search-input" %>
