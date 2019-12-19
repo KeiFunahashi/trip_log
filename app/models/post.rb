@@ -2,8 +2,8 @@ class Post < ApplicationRecord
 # belongs_to :user
 has_many :bookmarks
 has_many :users, through: :bookmarks
-belongs_to :user
-belongs_to :post
+belongs_to :user, optional: true
+belongs_to :trip, inverse_of: :posts, optional: true
 
   def self.search(search)
     return Post.all unless search

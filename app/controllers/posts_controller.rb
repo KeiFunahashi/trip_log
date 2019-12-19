@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :move_to_index, except: :index
 
 def index
+  @trip = Trip.all.order("created_at DESC").page(params[:page]).per(12)
   @posts = Post.all.order("time DESC").page(params[:page]).per(12)
 end
 
