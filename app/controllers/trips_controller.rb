@@ -1,7 +1,7 @@
 class TripsController < ApplicationController
   def main
     @trip = Trip.new
-    2.times{@trip.posts.build}
+    5.times{@trip.posts.build}
 
   end
 
