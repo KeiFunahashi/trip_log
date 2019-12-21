@@ -93,7 +93,7 @@
           <% end %>
           <%= link_to "/posts/#{post.id}" do %>
             <table class="post-contents">
-              <div class="post-image" style="background-image: url(<%= post.image %>);"></div>
+              <div class="post-image"><%= image_tag post.image.to_s, size: '200x200' %></div>
               <tr class="post-title">
                 <th>
                   <p>Title</p>

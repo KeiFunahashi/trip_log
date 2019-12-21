@@ -37,7 +37,7 @@
               <%= post.text_field :place, placeholder: "Place" %>
             </div>
             <div class="box form-img">
-              <%= post.text_field :image, placeholder: "Image Url" %>
+              <%= post.file_field :image %>
             </div>
             <div class="text-box form-text">
               <%= post.text_area :text, placeholder: "text" , rows: "10" %>
