@@ -1,7 +1,7 @@
 <main class="posts-new">
   <div class="main-contents">
     <h3 class="new_post-title">
-      Post
+      Trip
     </h3>
     <div class="form">
       <%= form_for @post do |form| %>
@@ -30,7 +30,7 @@
           <%= form.text_field :place, placeholder: "Place" %>
         </div>
         <div class="box form-img">
-          <%= form.file_field :image %>
+          <%= form.text_field :image, placeholder: "Image Url" %>
         </div>
         <div class="text-box form-text">
           <%= form.text_area :text, placeholder: "text" , rows: "10" %>
