@@ -86,7 +86,7 @@
           <%= link_to "/profiles/#{post.user_id}" do %>
             <div class="contents-header">
               <div class="contributor">
-                <div class="profile-img" style="background-image: url(<%= post.trip.user.profileimg %>);" ></div>
+                <div class="profile-img"><%= image_tag post.trip.user.profileimg.to_s, size: '20x40' %></div>
                 <%= simple_format(post.trip.user.nickname) %>
               </div>
             </div>
