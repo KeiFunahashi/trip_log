@@ -1,4 +1,6 @@
 class TripsController < ApplicationController
+  before_action :authenticate_user!, only: [:main]
+
   def main
     @trip = Trip.new
     @trip.posts.build
