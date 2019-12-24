@@ -1,5 +1,4 @@
 <main class="new-user-registration">
-<div class="left-contents">leftcontents</div>
 <div class="main-contents">
     <div class="sign-up-box">
     <h2 class="new_post-title">
@@ -9,6 +8,12 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
+      <div class="field" id="myfile">
+        <%= f.label "Profile Photo" %><br />
+        <%= f.file_field :profileimg, autofocus: true %>
+        <div class="preview" />
+      </div>
+
       <div class="field">
         <%= f.label "name" %><br />
         <%= f.text_field :nickname,placeholder: "", autofocus: true, maxlength: "6" %>
@@ -17,11 +22,6 @@
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, placeholder: "xxx@xxx", autofocus: true, autocomplete: "email" %>
-      </div>
-
-      <div class="field">
-        <%= f.label "Profile Photo" %><br />
-        <%= f.file_field :profileimg, autofocus: true %>
       </div>
 
       <div class="field">
@@ -58,5 +58,4 @@
     <% end %>
     </div>
 </div>
-<div class="right-contents">right-contents</div>
 </main>

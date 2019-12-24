@@ -1,6 +1,27 @@
     // .user-show .main-contents {
     //     display: block;
     // }
+    .new-user-registration {
+        .new_post-title {
+            font-size: 25px;
+        }
+        .new_user {
+            padding-top: 25px;
+        }
+        .preview {
+            margin: auto;
+            height: 300px;
+            width: 300px;
+        }
+        img {
+            height: 200px;
+            width: 200px;
+        }
+        .field {
+            padding-top: 20px;
+        }
+    }
+    
     .user-show {
         .left-contents {
             width: 20%;
