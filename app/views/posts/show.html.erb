@@ -25,7 +25,8 @@
         <%= simple_format(@post.text) %>
       </div>
       </div>
-          <ul class="more_list">
+      <% if user_signed_in? && current_user.id == @post.trip.user_id %>
+    <ul class="more_list">
       <li>
         <%= link_to 'Edit', "/posts/#{@post.id}/edit", method: :get %>
       </li>
@@ -33,6 +34,7 @@
         <%= link_to 'Delite', "/posts/#{@post.id}", method: :delete %>
       </li>
     </ul>
+    <% end %>
 </div>
     </div>
 </main>
