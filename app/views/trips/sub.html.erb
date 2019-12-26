@@ -4,39 +4,42 @@
       Trip
     </h3>
     <div class="form">
-      <%= form_for @post do |form| %>
-        <div class="form-time">
-            <%= raw sprintf(
-              form.datetime_select(
-                :time,
-                {
-                  start_year:     Time.zone.now.prev_year.year,
-                  end_year:       Time.zone.now.next_year.year,
-                  default:        Time.zone.now,
-                  use_two_digit_numbers: true,
-                  date_separator: '%s',
-                  datetime_separator: '%s',
-                  time_separator: '%s'
-                },
-                { class: 'date-select' }
+      <%= form_for @trip do |form| %>
+          <%= form.fields_for :posts do |post| %>
+            <div class="form-time">
+              <%= raw sprintf(
+              post.datetime_select(
+              :time,
+              {
+              start_year:     Time.zone.now.prev_year.year,
+              end_year:       Time.zone.now.next_year.year,
+              default:        Time.zone.now,
+              use_two_digit_numbers: true,
+              date_separator: '%s',
+              datetime_separator: '%s',
+              time_separator: '%s'
+              },
+              { class: 'date-select' }
               ),
               '/ ', '/ ', ' ', ': ') + ''
-            %>
-        </div>
-        <div class="box form-title">
-          <%= form.text_field :title, placeholder: "Title" %>
-        </div>
-        <div class="box form-place">
-          <%= form.text_field :place, placeholder: "Place" %>
-        </div>
-        <div class="box form-img">
-          <%= form.text_field :image, placeholder: "Image Url" %>
-        </div>
-        <div class="text-box form-text">
-          <%= form.text_area :text, placeholder: "text" , rows: "10" %>
-        </div>
+              %>
+            </div>
+            <div class="box form-title">
+              <%= post.select :title,[["１日目","１日目"],["２日目","２日目"],["３日目","３日目"]],  :prompt => "---",class:"good_form_box" %>
+            </div>
+            <div class="box form-place">
+              <%= post.text_field :place, placeholder: "Place" %>
+            </div>
+            <div class="box form-img">
+              <%= post.file_field :image %>
+            </div>
+            <div class="text-box form-text">
+              <%= post.text_area :text, placeholder: "text" , rows: "10" %>
+            </div>
+          <% end %>
         <div class="form-btn">
           <%= form.submit "✈︎" %>
+        </div>
         </div>
       <% end %>
     </div>

@@ -3,17 +3,25 @@ class TripsController < ApplicationController
 
   def main
     @trip = Trip.new
-    @trip.posts.build
+    session[:trip] = nil
     # 5.times{@trip.posts.build}
   end
 
   def sub
+    session[:title] = trip_params[:title]
+    session[:prefecture] = trip_params[:prefecture]
+    session[:user_id] = trip_params[:user_id]
     @trip = Trip.new
-    @trip.posts.new
+    @trip.posts.build
   end
 
   def create
-    @trip= Trip.new(trip_params)
+    @trip= Trip.new(
+      title: session[:title],
+      prefecture: session[:prefecture],
+      user_id: session[:user_id],  
+      # posts_attributes: [:id, :title, :time, :place, :image, :text]
+)
     if @trip.save!
       redirect_to root_path
     else 

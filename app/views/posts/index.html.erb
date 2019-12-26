@@ -15,9 +15,9 @@
           </div>
         </div>
 <ul class="slider">
-<li><%= image_tag 'plane_night.jpg', size: '700x700' %></li>
-<li><%= image_tag 'road.jpg', size: '700x700' %></li>
-<li><%= image_tag 'beach.jpg', size: '700x700' %></li>
+<li><%= image_tag 'plane_night.jpg', height: '700' %></li>
+<li><%= image_tag 'road.jpg', height: '700' %></li>
+<li><%= image_tag 'beach.jpg', height: '700' %></li>
 </ul>
 <div class="search-box">
   <%= form_with(url:  search_posts_path, local: true, method: :get, class: "search-form") do |form| %>
@@ -36,49 +36,25 @@
   <div class='side-bar'>
   <ul>
     <li>
-    <p>About</p>
+    <a href="#about">About</a>
    </li>
     <li>
-    <p>Recomendation</p>
+    <a href="#recomendation">Recomendation</a>
     </li>
     <li>
-    <p>News</p>
+    <a href="#news">News</a>
     </li>
     <li>
-    <p>Information</p>
+    <a href="#information">Information</a>
     </li>
     <li>
-    <p>Contact</p>
+    <a href="#contact">Contact</a>
     </li>
-    <li>
-    <p></p>
-    </li>
-    <li>
-    <p></p>
-    </li>
-    <li>
-    <p></p>
-    </li>
-    <li>
-    <p></p>
-    </li>
-    <li>
-    <p></p>
-    </li>
-    <li>
-    <p></p>
-    </li>
-    <li>
-    <p></p>
-    </li>
-    <li>
-    <p></p>
-    </li>
-
   </ul>
   </div>
   </div>
     <div class='main-contents'>
+    <div class="post-contents">
     <h2 class="contnts_title">＜ ALL TRIPS ＞</h2>
     <div class="contents">
       <% @posts.each do |post| %>
@@ -124,5 +100,38 @@
       <% end %>
       </div>
       <%= paginate(@posts) %>
+    </div>
+    <div class="contents" id="about">
+      <h2>About</h2>
+      <div class="about">
+        <p>Trop Logは、旅の思い出を記録できるアプリです
+        <br>写真とともに旅先の記憶を残し、
+        <br>楽しかった思い出を共有しましょう</p>
+      </div>
+    </div>
+    <div class="contents" id="recomendation">
+      <h2>Recomendation</h2>
+      <div class="contents_boxs">
+      <div class="contents_box"></div>
+      <div class="contents_box"></div>
+      <div class="contents_box"></div>
+      <div class="contents_box"></div>
+      <div class="contents_box"></div>
+      </div>
+    </div>
+    <div class="contents" id="news">
+      <h2>News</h2>
+      <div class="contents_box"></div>
+      <div class="contents_box"></div>
+      <div class="contents_box"></div>
+      <div class="contents_box"></div>
+      <div class="contents_box"></div>
+    </div>
+    <div class="contents" id="information">
+      <h2>Information</h2>
+    </div>
+    <div class="contents" id="contact">
+      <h2>Contact</h2>
+    </div>
     </div>
   </main>

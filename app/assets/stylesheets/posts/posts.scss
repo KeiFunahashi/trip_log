@@ -3,6 +3,10 @@
     background-color: black;
 }
 
+.slick-track {
+    width: 2846px;
+}
+
 .contents-header {
     height: 50px;
 }
@@ -20,10 +24,25 @@
         h2 {
             font-size: 30px;
             font-weight: bold;
-            margin: 10px auto;
+            // margin: 10px auto;
+            border-bottom: ridge;
+            height: 50px;
+            line-height: normal;
         }
         .contents {
-            height: 1140px;
+            height: 1200px;
+            .contents_boxs {
+                display: flex;
+                .contents_box {
+                    width: 200px;
+                }
+            }
+            .contents_box {
+                height: 200px;
+                margin: 20px;
+                width: auto;
+                background-color: rgb(184, 183, 183);
+            }
         }
     }
     .contributor {
@@ -53,6 +72,19 @@
         tr {
             margin: 5px auto;
         }
+    }
+    #about {
+        height: 500px;
+    }
+    .about {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        line-height: 40px;
+        font-size: 20px;
+    }
+    #recomendation {
+        height: fit-content;
     }
 }
 

@@ -4,45 +4,13 @@
       Trip
     </h3>
     <div class="form">
-      <%= form_for @trip do |form| %>
+      <%= form_for @trip, url: sub_trips_path, method: :get do |form| %>
         <div class="box form-title">
           <%= form.text_field :title, placeholder: "Title" %>
         </div>
         <div class="box form-prefecture">
           <%= form.text_field :prefecture, placeholder: "Prefecture" %>
         </div>
-          <%= form.fields_for :posts do |post| %>
-            <div class="form-time">
-              <%= raw sprintf(
-              post.datetime_select(
-              :time,
-              {
-              start_year:     Time.zone.now.prev_year.year,
-              end_year:       Time.zone.now.next_year.year,
-              default:        Time.zone.now,
-              use_two_digit_numbers: true,
-              date_separator: '%s',
-              datetime_separator: '%s',
-              time_separator: '%s'
-              },
-              { class: 'date-select' }
-              ),
-              '/ ', '/ ', ' ', ': ') + ''
-              %>
-            </div>
-            <div class="box form-title">
-              <%= post.text_field :title, placeholder: "Title" %>
-            </div>
-            <div class="box form-place">
-              <%= post.text_field :place, placeholder: "Place" %>
-            </div>
-            <div class="box form-img">
-              <%= post.file_field :image %>
-            </div>
-            <div class="text-box form-text">
-              <%= post.text_area :text, placeholder: "text" , rows: "10" %>
-            </div>
-          <% end %>
         <div class="form-btn">
           <%= form.submit "✈︎" %>
         </div>
