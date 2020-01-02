@@ -3,25 +3,40 @@ class TripsController < ApplicationController
 
   def main
     @trip = Trip.new
-    session[:trip] = nil
-    # 5.times{@trip.posts.build}
-  end
-
-  def sub
-    session[:title] = trip_params[:title]
-    session[:prefecture] = trip_params[:prefecture]
-    session[:user_id] = trip_params[:user_id]
-    @trip = Trip.new
+    # session[:trip] = nil
     @trip.posts.build
   end
 
+  # def sub
+  #   session[:title] = trip_params[:title]
+  #   session[:prefecture] = trip_params[:prefecture]
+  #   @trip = Trip.new
+  #   @trip.posts.build
+  # end
+
+  # def done
+  #   session[:title] = trip_params[:title]
+  #   session[:prefecture] = trip_params[:prefecture]
+  #   session[:text] = trip_params[:text]
+  #   session[:image] = trip_params[:image]
+  #   session[:time] = trip_params[:time]
+  #   session[:place] = trip_params[:place]
+  #   @trip = Trip.create(
+  #   title: session[:title],
+  #   prefecture: session[:prefecture],
+  #   # text: session[:text],
+  #   # image: session[:image],
+  #   # time: session[:time],
+  #   # place: session[:place],
+  #  )
+  #  if @trip.save!
+  #   redirect_to "root"
+  #  end
+  #     render 'trips/sub'
+  # end
+
   def create
-    @trip= Trip.new(
-      title: session[:title],
-      prefecture: session[:prefecture],
-      user_id: session[:user_id],  
-      # posts_attributes: [:id, :title, :time, :place, :image, :text]
-)
+    @trip= Trip.new(trip_params)
     if @trip.save!
       redirect_to root_path
     else 
@@ -33,6 +48,6 @@ class TripsController < ApplicationController
     params.require(:trip).permit(
     :prefecture,
     :title,
-    posts_attributes: [:id, :title, :time, :place, :image, :text]).merge(user_id: current_user.id)
+    posts_attributes: [:title, :time, :place, :image, :text ,user_id: current_user.id]).merge(user_id: current_user.id)
   end
 end

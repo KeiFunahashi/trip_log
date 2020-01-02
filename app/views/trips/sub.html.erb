@@ -4,7 +4,7 @@
       Trip
     </h3>
     <div class="form">
-      <%= form_for @trip do |form| %>
+      <%= form_for @trip, url: done_trips_path,method: :get do |form| %>
           <%= form.fields_for :posts do |post| %>
             <div class="form-time">
               <%= raw sprintf(
@@ -23,9 +23,6 @@
               ),
               '/ ', '/ ', ' ', ': ') + ''
               %>
-            </div>
-            <div class="box form-title">
-              <%= post.select :title,[["１日目","１日目"],["２日目","２日目"],["３日目","３日目"]],  :prompt => "---",class:"good_form_box" %>
             </div>
             <div class="box form-place">
               <%= post.text_field :place, placeholder: "Place" %>
