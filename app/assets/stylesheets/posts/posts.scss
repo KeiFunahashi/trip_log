@@ -24,7 +24,7 @@
         h2 {
             font-size: 30px;
             font-weight: bold;
-            // margin: 10px auto;
+            padding-top: 20px;
             border-bottom: ridge;
             height: 50px;
             line-height: normal;
@@ -173,6 +173,40 @@
     }
 }
 
+// -----informationtab-----
+#information {
+    height: fit-content;
+    .tab {}
+    .tab li {
+        color: #333;
+        padding: 22px 21px;
+        width: 16.4%;
+        cursor: pointer;
+        list-style: none;
+        transition: .3s;
+    }
+    .tab li.active {
+        color: #fff;
+        background-color: #c0c0c0;
+        cursor: auto;
+    }
+    .area ul {
+        display: none;
+    }
+    .area ul.show {
+        display: block;
+        background-color: #c0c0c0;
+        height: 600px;
+    }
+    .clearfix {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+// -------------------------------
 // ---------- 詳細ページ----------
 .show-main {
     .show-content {
