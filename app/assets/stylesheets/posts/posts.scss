@@ -88,6 +88,28 @@
     }
 }
 
+#contact {
+    height: auto;
+    .form {
+        margin-top: 40px;
+        input {
+            margin-top: 10px;
+        }
+        #family-name1 {
+            width: 50%;
+            height: 30px;
+        }
+        #family-name2 {
+            width: 50%;
+            height: 30px;
+        }
+        #family-name3 {
+            width: 50%;
+            height: 90px;
+        }
+    }
+}
+
 .post-image {
     height: 200px;
     background-size: cover;

@@ -22,7 +22,6 @@ Rails.application.routes.draw do
     collection do
       get 'main'
       get 'sub'
-      get 'complete' # ここで、入力の全てが終了する
       get 'done' # 登録完了後のページ
     end
   end

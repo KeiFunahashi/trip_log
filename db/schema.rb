@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_19_074825) do
+ActiveRecord::Schema.define(version: 2019_12_18_073909) do
 
   create_table "bookmarks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -30,9 +30,8 @@ ActiveRecord::Schema.define(version: 2019_12_19_074825) do
     t.datetime "updated_at", null: false
     t.text "place"
     t.bigint "trip_id"
-    t.bigint "user_id"
+    t.integer "user_id"
     t.index ["trip_id"], name: "index_posts_on_trip_id"
-    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -70,7 +69,6 @@ ActiveRecord::Schema.define(version: 2019_12_19_074825) do
   end
 
   add_foreign_key "posts", "trips"
-  add_foreign_key "posts", "users"
   add_foreign_key "relationships", "users"
   add_foreign_key "relationships", "users", column: "follow_id"
   add_foreign_key "trips", "users"
