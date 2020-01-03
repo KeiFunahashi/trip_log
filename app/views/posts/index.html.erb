@@ -157,10 +157,10 @@
         <div class="information_box">
         <div class="information_contentes">
             <% @information.each.with_index(1) do |inf,i| %>
-<li class="inf information<%= i %>">
-<p><%= inf.inftitle %></p>
-<p class="created_at"><%= inf.created_at %></p>
-</li>
+            <li class="inf information<%= i %>">
+            <p><%= inf.inftitle %></p>
+            <p class="created_at"><%= inf.created_at %></p>
+            </li>
             <% end %>
             </div>
         <div class="information_detail">
@@ -179,101 +179,165 @@
         <ul>
         <div class="information_box">
         <div class="information_contentes">
-            <% @information.each_with_index do |inf,i| %>
-                      <li class="#{i}">
+            <% @information.each.with_index(1) do |inf,i| %>
+            <li class="inf information<%= i %>">
             <p><%= inf.inftitle %></p>
-                      </li>
-            <% end %>
-            </div>
-        <div class="information_detail">
-        </div>
-        </div>
-        </ul>
-        <ul>
-        <div class="information_box">
-        <div class="information_contentes">
-            <% @information.each do |inf| %>
-                      <li>
-            <p><%= inf.inftitle %></p>
-                      </li>
-            <% end %>
-            </div>
-        <div class="information_detail">
-          about
-        </div>
-        </div>
-        </ul>
-        <ul>
-        <div class="information_box">
-        <div class="information_contentes">
-            <% @information.each do |inf| %>
-                      <li>
-            <p><%= inf.inftitle %></p>
-                      </li>
-            <% end %>
-            </div>
-        <div class="information_detail">
-          about
-        </div>
-        </div>
-        </ul>
-        <ul>
-        <div class="information_box">
-        <div class="information_contentes">
-            <% @information.each do |inf| %>
-                      <li>
-            <%= inf.inftitle %>
-                      </li>
-            <% end %>
-            </div>
-        <div class="information_detail">
-          about
-        </div>
-        </div>
-        </ul>
-        <ul>
-        <div class="information_box">
-        <div class="information_contentes">
-            <% @information.each do |inf| %>
-                      <li>
-            <%= inf.inftitle %>
-                      </li>
-            <% end %>
-            </div>
-        <div class="information_detail">
-          about
-        </div>
-        </div>
-        </ul>
-        <ul>
-        <div class="information_box">
-        <div class="information_contentes">
-          <% @information.each_with_index do |inf,i| %>
-            <li>
-            <%= inf.inftitle %>
+            <p class="created_at"><%= inf.created_at %></p>
             </li>
-          <% end %>
-        </div>
+            <% end %>
+            </div>
         <div class="information_detail">
-          about
+        <div class="information_img">
+              <%= image_tag  @information[0].infimage.to_s %>
+              </div>
+                      <div class="information_title">
+              <p><%= @information[0].inftitle %></p>
+              </div>
+                      <div class="information_text">
+              <p><%= @information[0].inftext %></p>
+              </div>
         </div>
         </div>
         </ul>
         <ul>
         <div class="information_box">
         <div class="information_contentes">
-            <% @information.each do |inf| %>
-                      <li>
-            <%= inf.inftitle %>
-                      </li>
+            <% @information.each.with_index(1) do |inf,i| %>
+            <li class="inf information<%= i %>">
+            <p><%= inf.inftitle %></p>
+            <p class="created_at"><%= inf.created_at %></p>
+            </li>
             <% end %>
             </div>
         <div class="information_detail">
-          about
+        <div class="information_img">
+              <%= image_tag  @information[0].infimage.to_s %>
+              </div>
+                      <div class="information_title">
+              <p><%= @information[0].inftitle %></p>
+              </div>
+                      <div class="information_text">
+              <p><%= @information[0].inftext %></p>
+              </div>
         </div>
         </div>
         </ul>
-                                    <%= paginate(@information) %>
+        <ul>
+        <div class="information_box">
+        <div class="information_contentes">
+            <% @information.each.with_index(1) do |inf,i| %>
+            <li class="inf information<%= i %>">
+            <p><%= inf.inftitle %></p>
+            <p class="created_at"><%= inf.created_at %></p>
+            </li>
+            <% end %>
+            </div>
+        <div class="information_detail">
+        <div class="information_img">
+              <%= image_tag  @information[0].infimage.to_s %>
+              </div>
+                      <div class="information_title">
+              <p><%= @information[0].inftitle %></p>
+              </div>
+                      <div class="information_text">
+              <p><%= @information[0].inftext %></p>
+              </div>
+        </div>
+        </div>
+        </ul>
+        <ul>
+        <div class="information_box">
+        <div class="information_contentes">
+            <% @information.each.with_index(1) do |inf,i| %>
+            <li class="inf information<%= i %>">
+            <p><%= inf.inftitle %></p>
+            <p class="created_at"><%= inf.created_at %></p>
+            </li>
+            <% end %>
+            </div>
+        <div class="information_detail">
+        <div class="information_img">
+              <%= image_tag  @information[0].infimage.to_s %>
+              </div>
+                      <div class="information_title">
+              <p><%= @information[0].inftitle %></p>
+              </div>
+                      <div class="information_text">
+              <p><%= @information[0].inftext %></p>
+              </div>
+        </div>
+        </div>
+        </ul>
+        <ul>
+        <div class="information_box">
+        <div class="information_contentes">
+            <% @information.each.with_index(1) do |inf,i| %>
+            <li class="inf information<%= i %>">
+            <p><%= inf.inftitle %></p>
+            <p class="created_at"><%= inf.created_at %></p>
+            </li>
+            <% end %>
+            </div>
+        <div class="information_detail">
+        <div class="information_img">
+              <%= image_tag  @information[0].infimage.to_s %>
+              </div>
+                      <div class="information_title">
+              <p><%= @information[0].inftitle %></p>
+              </div>
+                      <div class="information_text">
+              <p><%= @information[0].inftext %></p>
+              </div>
+        </div>
+        </div>
+        </ul>
+        <ul>
+        <div class="information_box">
+        <div class="information_contentes">
+            <% @information.each.with_index(1) do |inf,i| %>
+            <li class="inf information<%= i %>">
+            <p><%= inf.inftitle %></p>
+            <p class="created_at"><%= inf.created_at %></p>
+            </li>
+            <% end %>
+            </div>
+        <div class="information_detail">
+        <div class="information_img">
+              <%= image_tag  @information[0].infimage.to_s %>
+              </div>
+                      <div class="information_title">
+              <p><%= @information[0].inftitle %></p>
+              </div>
+                      <div class="information_text">
+              <p><%= @information[0].inftext %></p>
+              </div>
+        </div>
+        </div>
+        </ul>
+        <ul>
+        <div class="information_box">
+        <div class="information_contentes">
+            <% @information.each.with_index(1) do |inf,i| %>
+            <li class="inf information<%= i %>">
+            <p><%= inf.inftitle %></p>
+            <p class="created_at"><%= inf.created_at %></p>
+            </li>
+            <% end %>
+            </div>
+        <div class="information_detail">
+        <div class="information_img">
+              <%= image_tag  @information[0].infimage.to_s %>
+              </div>
+                      <div class="information_title">
+              <p><%= @information[0].inftitle %></p>
+              </div>
+                      <div class="information_text">
+              <p><%= @information[0].inftext %></p>
+              </div>
+        </div>
+        </div>
+        </ul>
+            <%= paginate(@information) %>
         </div>
 
           </div>
