@@ -1,0 +1,13 @@
+<main class="posts-new">
+<div class="main-contents">
+<h2 class="news_form">NEWS</h2>
+<div class="news_form">
+<%= form_for @news, url: news_index_path, method: :post do |form|%>
+<%= form.file_field :newsimage %>
+<%= form.text_area :newstitle, placeholder: "title" , rows: "10" %>
+<%= form.text_area :newscontent, placeholder: "content" %>
+<%= form.submit "SEND" %>
+<% end %>
+</div>
+</div>
+</main>

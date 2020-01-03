@@ -1,0 +1,49 @@
+#information {
+    .show {
+        p {
+            padding: 20px;
+            width: auto;
+            margin: 0 auto;
+        }
+        .information_box {
+            height: 100%;
+            display: flex;
+        }
+        .information_contentes {
+            height: 100%;
+            width: 50%;
+            .inf {
+                p {
+                    width: 100%;
+                    font-size: 25px;
+                }
+                .created_at {
+                    font-size: 15px;
+                }
+            }
+            li {
+                height: 19.8%;
+                border-bottom: 1px solid rgb(206, 204, 204);
+            }
+            li:hover {
+                background-color: grey;
+            }
+        }
+        .information_detail {
+            .information_img {
+                height: 60%;
+            }
+            .information_title {
+                height: 10%;
+                width: auto;
+            }
+            .information_text {
+                height: 30%;
+                width: auto;
+            }
+        }
+    }
+    .pagination {
+        padding-top: 20px;
+    }
+}
