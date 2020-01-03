@@ -9,9 +9,18 @@ Trip
 <%= form.text_field :title, placeholder: "Title" %>
 </div>
 <div class="box form-prefecture">
-<%= form.text_field :prefecture, placeholder: "Prefecture" %>
+<%= form.collection_select :prefecture, Prefecture.all, :id, :name,  :prompt => "---"  %>
 </div>
+    <h3 class="new_post-title">
+      Post
+    </h3>
 <%= form.fields_for :posts do |post| %>
+<div class="post_content">
+<div class="box form-img">
+<%= post.file_field :image %>
+<div class="preview"></div>
+</div>
+<div class="form_contents">
 <div class="form-time">
 <%= raw sprintf(
 post.datetime_select(
@@ -33,11 +42,10 @@ time_separator: '%s'
 <div class="box form-place">
 <%= post.text_field :place, placeholder: "Place" %>
 </div>
-<div class="box form-img">
-<%= post.file_field :image %>
-</div>
 <div class="text-box form-text">
 <%= post.text_area :text, placeholder: "text" , rows: "10" %>
+</div>
+</div>
 </div>
 <% end %>
 <%= form.link_to_add "行き先追加", :posts %>

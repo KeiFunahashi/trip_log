@@ -80,3 +80,4 @@ gem 'kaminari'
 gem 'carrierwave'
 gem 'mini_magick'
 gem "nested_form"
+gem 'active_hash'

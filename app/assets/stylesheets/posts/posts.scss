@@ -78,7 +78,7 @@
     }
     .about {
         display: flex;
-        height: 100%;
+        height: 85%;
         align-items: center;
         line-height: 40px;
         font-size: 20px;
@@ -119,6 +119,11 @@
 // ----------投稿ページ----------
 .posts-new {
     width: 70%;
+    #trip_prefecture {
+        border-radius: 5px;
+        height: 100%;
+        background-color: white;
+    }
     .main-contents {
         height: auto;
         margin: 10px auto;
@@ -136,6 +141,13 @@
 .form {
     height: auto;
     border-radius: 5px;
+    .preview {
+        height: 250px;
+        width: 250px;
+    }
+    .post_content {
+        display: flex;
+    }
     div {
         margin-top: 20px;
         input {
