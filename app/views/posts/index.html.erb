@@ -35,6 +35,12 @@
   <div class='left-contents'>
   <div class='side-bar'>
   <ul>
+     <li>
+    <a href="#">Top</a>
+   </li>
+   <li>
+    <a href="#trip">All trips</a>
+   </li>
     <li>
     <a href="#about">About</a>
    </li>
@@ -54,8 +60,8 @@
   </div>
   </div>
     <div class='main-contents'>
-    <div class="post-contents">
-    <h2 class="contnts_title">＜ ALL TRIPS ＞</h2>
+    <div class="post-contents"id="trip">
+    <h2 class="contnts_title" >＜ ALL TRIPS ＞</h2>
     <div class="contents">
       <% @posts.each do |post| %>
         <div class='main-content'>
@@ -112,11 +118,11 @@
     <div class="contents" id="recomendation">
       <h2>Recomendation</h2>
       <div class="contents_boxs">
-      <div class="contents_box"></div>
-      <div class="contents_box"></div>
-      <div class="contents_box"></div>
-      <div class="contents_box"></div>
-      <div class="contents_box"></div>
+      <% @posts.each do |post| %>
+      <div class="contents_box">
+              <div class="post-image"><%= image_tag post.image.to_s, size: '200x200' %></div>
+      </div>
+      <% end %>
       </div>
     </div>
     <div class="contents" id="news">
@@ -159,7 +165,7 @@
             <% @information.each.with_index(1) do |inf,i| %>
             <li class="inf information<%= i %>">
             <p><%= inf.inftitle %></p>
-            <p class="created_at"><%= inf.created_at %></p>
+            <p class="created_at"><%= inf.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
             </li>
             <% end %>
             </div>
@@ -182,7 +188,7 @@
             <% @information.each.with_index(1) do |inf,i| %>
             <li class="inf information<%= i %>">
             <p><%= inf.inftitle %></p>
-            <p class="created_at"><%= inf.created_at %></p>
+            <p class="created_at"><%= inf.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
             </li>
             <% end %>
             </div>
@@ -205,7 +211,7 @@
             <% @information.each.with_index(1) do |inf,i| %>
             <li class="inf information<%= i %>">
             <p><%= inf.inftitle %></p>
-            <p class="created_at"><%= inf.created_at %></p>
+            <p class="created_at"><%= inf.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
             </li>
             <% end %>
             </div>
@@ -228,7 +234,7 @@
             <% @information.each.with_index(1) do |inf,i| %>
             <li class="inf information<%= i %>">
             <p><%= inf.inftitle %></p>
-            <p class="created_at"><%= inf.created_at %></p>
+            <p class="created_at"><%= inf.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
             </li>
             <% end %>
             </div>
@@ -251,7 +257,7 @@
             <% @information.each.with_index(1) do |inf,i| %>
             <li class="inf information<%= i %>">
             <p><%= inf.inftitle %></p>
-            <p class="created_at"><%= inf.created_at %></p>
+            <p class="created_at"><%= inf.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
             </li>
             <% end %>
             </div>
@@ -274,7 +280,7 @@
             <% @information.each.with_index(1) do |inf,i| %>
             <li class="inf information<%= i %>">
             <p><%= inf.inftitle %></p>
-            <p class="created_at"><%= inf.created_at %></p>
+            <p class="created_at"><%= inf.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
             </li>
             <% end %>
             </div>
@@ -297,7 +303,7 @@
             <% @information.each.with_index(1) do |inf,i| %>
             <li class="inf information<%= i %>">
             <p><%= inf.inftitle %></p>
-            <p class="created_at"><%= inf.created_at %></p>
+            <p class="created_at"><%= inf.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
             </li>
             <% end %>
             </div>
@@ -320,7 +326,7 @@
             <% @information.each.with_index(1) do |inf,i| %>
             <li class="inf information<%= i %>">
             <p><%= inf.inftitle %></p>
-            <p class="created_at"><%= inf.created_at %></p>
+            <p class="created_at"><%= inf.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
             </li>
             <% end %>
             </div>
