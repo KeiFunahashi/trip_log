@@ -123,7 +123,17 @@
       <h2>News</h2>
       <% @news.each do |news| %>
       <div class="contents_box">
-      <%= news.newstitle %>
+      <div class="news_image">
+      <%= image_tag news.newsimage.to_s %>
+      </div>
+      <div class="news_content">
+      <div class="news_content--title">
+      <p><%= news.newstitle %></p>
+      </div>
+            <div class="news_content--content">
+      <p><%= news.newscontent %></p>
+      </div>
+      </div>
             </div>
       <% end %>
       <%= paginate(@news) %>
@@ -144,51 +154,130 @@
       
       <div class="area">
         <ul class="show">
+        <div class="information_box">
+        <div class="information_contentes">
+            <% @information.each.with_index(1) do |inf,i| %>
+<li class="inf information<%= i %>">
+<p><%= inf.inftitle %></p>
+<p class="created_at"><%= inf.created_at %></p>
+</li>
+            <% end %>
+            </div>
+        <div class="information_detail">
+        <div class="information_img">
+              <%= image_tag  @information[0].infimage.to_s %>
+              </div>
+                      <div class="information_title">
+              <p><%= @information[0].inftitle %></p>
+              </div>
+                      <div class="information_text">
+              <p><%= @information[0].inftext %></p>
+              </div>
+        </div>
+        </div>
+        </ul>
+        <ul>
+        <div class="information_box">
+        <div class="information_contentes">
+            <% @information.each_with_index do |inf,i| %>
+                      <li class="#{i}">
+            <p><%= inf.inftitle %></p>
+                      </li>
+            <% end %>
+            </div>
+        <div class="information_detail">
+        </div>
+        </div>
+        </ul>
+        <ul>
+        <div class="information_box">
+        <div class="information_contentes">
+            <% @information.each do |inf| %>
+                      <li>
+            <p><%= inf.inftitle %></p>
+                      </li>
+            <% end %>
+            </div>
+        <div class="information_detail">
+          about
+        </div>
+        </div>
+        </ul>
+        <ul>
+        <div class="information_box">
+        <div class="information_contentes">
+            <% @information.each do |inf| %>
+                      <li>
+            <p><%= inf.inftitle %></p>
+                      </li>
+            <% end %>
+            </div>
+        <div class="information_detail">
+          about
+        </div>
+        </div>
+        </ul>
+        <ul>
+        <div class="information_box">
+        <div class="information_contentes">
             <% @information.each do |inf| %>
                       <li>
             <%= inf.inftitle %>
                       </li>
-
             <% end %>
-          <%= paginate(@information) %>
-        </ul>
-        <ul>
-          <li>梅田</li>
-          <li>難波</li>
-          <li>三宮</li>
-        </ul>
-        <ul>
-          <li>小倉</li>
-          <li>博多</li>
-          <li>久留米</li>
-        </ul>
-        <ul>
-          <li>a</li>
-          <li>a</li>
-          <li>a</li>
-        </ul>
-        <ul>
-          <li>b</li>
-          <li>b</li>
-          <li>b</li>
-        </ul>
-        <ul>
-          <li>c</li>
-          <li>c</li>
-          <li>c</li>
-        </ul>
-        <ul>
-          <li>d</li>
-          <li>d</li>
-          <li>d</li>
-        </ul>
-        <ul>
-          <li>e</li>
-          <li>e</li>
-          <li>e</li>
-        </ul>
+            </div>
+        <div class="information_detail">
+          about
         </div>
+        </div>
+        </ul>
+        <ul>
+        <div class="information_box">
+        <div class="information_contentes">
+            <% @information.each do |inf| %>
+                      <li>
+            <%= inf.inftitle %>
+                      </li>
+            <% end %>
+            </div>
+        <div class="information_detail">
+          about
+        </div>
+        </div>
+        </ul>
+        <ul>
+        <div class="information_box">
+        <div class="information_contentes">
+          <% @information.each_with_index do |inf,i| %>
+            <li>
+            <%= inf.inftitle %>
+            </li>
+          <% end %>
+        </div>
+        <div class="information_detail">
+          about
+        </div>
+        </div>
+        </ul>
+        <ul>
+        <div class="information_box">
+        <div class="information_contentes">
+            <% @information.each do |inf| %>
+                      <li>
+            <%= inf.inftitle %>
+                      </li>
+            <% end %>
+            </div>
+        <div class="information_detail">
+          about
+        </div>
+        </div>
+        </ul>
+                                    <%= paginate(@information) %>
+        </div>
+
           </div>
+
     </div>
     <div class="contents" id="contact">
       <h2>Contact</h2>

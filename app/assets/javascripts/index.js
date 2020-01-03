@@ -17,7 +17,8 @@ $(document).on('turbolinks:load', function() {
         $('.contents_boxs').slick({
             autoplay: true,
             accessibility: true,
-            // arrows: true,
+            arrows: false,
+            dots: true,
             centerMode: true,
             centerPadding: '60px',
             slidesToShow: 3,
