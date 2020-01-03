@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_03_023950) do
+ActiveRecord::Schema.define(version: 2020_01_03_031109) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "prefecture_id"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 2020_01_03_023950) do
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_bookmarks_on_post_id"
     t.index ["user_id"], name: "index_bookmarks_on_user_id"
+  end
+
+  create_table "information", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "infimage", null: false
+    t.text "inftitle", null: false
+    t.text "inftext", null: false
+    t.text "prefecture", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "news", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -1,24 +1,44 @@
-<main class="user-edit">
-<div class="right-contents"></div>
+
+<main class="new-user-registration">
 <div class="main-contents">
-<h2 class="user-edit-label">Edit <%= resource_name.to_s.humanize %></h2>
+    <div class="sign-up-box">
+    <h2 class="new_post-title">
+    Sign up
+    </h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-        <%= f.text_field :nickname,placeholder: "", autofocus: true, maxlength: "8" %>
-  </div>
+      <div class="field" id="myfile">
+        <%= f.label "Profile Photo" %><br />
+        <%= f.file_field :profileimg, autofocus: true %>
+        <div class="preview"></div>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <div class="field">
+        <%= f.label "name" %><br />
+        <%= f.text_field :nickname,placeholder: "", autofocus: true, maxlength: "6" %>
+      </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, placeholder: "xxx@xxx", autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :from %><br />
+        <%= f.text_field :from, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :age %><br />
+        <%= f.text_field :age, autofocus: true %>
+      </div>
+
+      <div class="field introduction">
+        <%= f.label :introduction %><br />
+        <%= f.text_field :introduction, autofocus: true %>
+      </div>
 
   <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
@@ -39,36 +59,11 @@
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
-  <div class="field">
-    <%= f.label :profileimg %><br />
-    <%= f.text_field :profileimg, autofocus: true %>
-  </div>
 
-  <div class="field">
-    <%= f.label :from %><br />
-    <%= f.text_field :from, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.text_field :age, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :introduction %><br />
-    <%= f.text_field :introduction, autofocus: true %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+      <div class="actions">
+        <%= f.submit "Edit" %>
+      </div>
+    <% end %>
+    </div>
 </div>
-<div class="right-contents"></div>
 </main>

@@ -1,44 +1,48 @@
+
 <main class="posts-new">
-  <div class="main-contents">
+<div class="main-contents">
+<div class="form">
     <h3 class="new_post-title">
       Post
     </h3>
-    <div class="form">
-      <%= form_for @post do |form| %>
-        <div class="form-time">
-            <%= raw sprintf(
-              form.datetime_select(
-                :time,
-                {
-                  start_year:     Time.zone.now.prev_year.year,
-                  end_year:       Time.zone.now.next_year.year,
-                  default:        Time.zone.now,
-                  use_two_digit_numbers: true,
-                  date_separator: '%s',
-                  datetime_separator: '%s',
-                  time_separator: '%s'
-                },
-                { class: 'date-select' }
-              ),
-              '/ ', '/ ', ' ', ': ') + ''
-            %>
-        </div>
-        <div class="form-title">
-          <%= form.text_field :title, placeholder: "Title" %>
-        </div>
-        <div class="form-place">
-          <%= form.text_field :place, placeholder: "Place" %>
-        </div>
-        <div class="form-img">
-          <%= form.text_field :image, placeholder: "Image Url" %>
-        </div>
-        <div class="form-text">
-          <%= form.text_area :text, placeholder: "text" , rows: "10" %>
-        </div>
-        <div class="form-btn">
-          <%= form.submit "✈︎" %>
-        </div>
-      <% end %>
-    </div>
-  </div>
+<%= form_for :posts,url: post_path,method: :patch do |post| %>
+<div class="post_content">
+<div class="box form-img">
+<%= post.file_field :image %>
+<div class="preview"></div>
+</div>
+<div class="form_contents">
+<div class="form-time">
+<%= raw sprintf(
+post.datetime_select(
+:time,
+{
+start_year:     Time.zone.now.prev_year.year,
+end_year:       Time.zone.now.next_year.year,
+default:        Time.zone.now,
+use_two_digit_numbers: true,
+date_separator: '%s',
+datetime_separator: '%s',
+time_separator: '%s'
+},
+{ class: 'date-select' }
+),
+'/ ', '/ ', ' ', ': ') + ''
+%>
+</div>
+<div class="box form-place">
+<%= post.text_field :place, placeholder: "Place" %>
+</div>
+<div class="text-box form-text">
+<%= post.text_area :text, placeholder: "text" , rows: "10" %>
+</div>
+</div>
+</div>
+<div class="form-btn">
+<%= post.submit "✈︎" %>
+</div>
+</div>
+<% end %>
+</div>
+</div>
 </main>

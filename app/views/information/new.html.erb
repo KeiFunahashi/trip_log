@@ -1,0 +1,14 @@
+<main class="posts-new">
+<div class="main-contents">
+<h2 class="information_form">Information</h2>
+<div class="information_form">
+<%= form_for @information, url: information_index_path, method: :post do |form|%>
+<%= form.file_field :infimage %>
+<%= form.text_area :inftitle, placeholder: "title" , rows: "10" %>
+<%= form.text_area :inftext, placeholder: "content" %>
+<%= form.collection_select :prefecture, Prefecture.all, :id, :name,  :prompt => "---"  %>
+<%= form.submit "SEND" %>
+<% end %>
+</div>
+</div>
+</main>
