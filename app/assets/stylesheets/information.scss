@@ -16,9 +16,11 @@
                 p {
                     width: 100%;
                     font-size: 25px;
+                    color: #636363;
                 }
                 .created_at {
                     font-size: 15px;
+                    color: #7e7b7b;
                 }
             }
             li {
@@ -30,16 +32,25 @@
             }
         }
         .information_detail {
+            margin: 30px;
+            background-color: lightgrey;
             .information_img {
                 height: 60%;
             }
             .information_title {
                 height: 10%;
                 width: auto;
+                p {
+                    font-size: 25px;
+                    color: #636363;
+                }
             }
             .information_text {
                 height: 30%;
                 width: auto;
+                p {
+                    font-size: 15px;
+                }
             }
         }
     }

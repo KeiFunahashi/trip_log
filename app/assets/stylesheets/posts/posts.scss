@@ -88,6 +88,14 @@
     }
 }
 
+#recomendation {
+    img {
+        width: 50%;
+        height: 90%;
+        margin: 10px;
+    }
+}
+
 #contact {
     height: auto;
     .form {
@@ -135,6 +143,9 @@
         height: 20%;
         font-size: 30px;
         border-bottom: dotted;
+        p {
+            color: #636363;
+        }
     }
     .news_content--content {
         height: 80%;
