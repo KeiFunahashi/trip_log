@@ -30,7 +30,11 @@
             line-height: normal;
         }
         .contents {
-            height: 1200px;
+            height: 1240px;
+            img {
+                height: 200px;
+                width: 200px;
+            }
             .contents_boxs {
                 display: flex;
                 .contents_box {
@@ -85,6 +89,35 @@
     }
     #recomendation {
         height: fit-content;
+    }
+}
+
+#trip {
+    .trip_contents {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap-reverse;
+        .trip_content--header {
+            display: flex;
+            align-items: center;
+        }
+        .trip_contents_detail {
+            width: 20%;
+            margin: 25px;
+            background-color: #f5f5f5;
+            img {
+                height: 160px;
+                width: 180px;
+                padding: 0 10px;
+            }
+            .trip_user--image {
+                img {
+                    height: 30px;
+                    width: 30px;
+                    padding: 5px;
+                }
+            }
+        }
     }
 }
 

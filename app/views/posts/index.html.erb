@@ -60,52 +60,28 @@
   </div>
   </div>
     <div class='main-contents'>
-    <div class="post-contents"id="trip">
+    <div class="post-contents">
+    <div class="contents"id="trip">
     <h2 class="contnts_title" >＜ ALL TRIPS ＞</h2>
-    <div class="contents">
-      <% @posts.each do |post| %>
-        <div class='main-content'>
-          <%= link_to "/profiles/#{post.user_id}" do %>
-            <div class="contents-header">
-              <div class="contributor">
-                <div class="profile-img"><%= image_tag post.trip.user.profileimg.to_s, size: '20x40' %></div>
-                <%= simple_format(post.trip.user.nickname) %>
-              </div>
-            </div>
+<div class="trip_contents">
+          <% @trip.each do |trip| %>
+          <div class="trip_contents_detail">
+                    <%= link_to "/trips/#{trip.id}" do %>
+
+          <div class="trip_content--header">
+                    <div class="trip_user--image"><%= image_tag trip.user.profileimg.to_s %></div>
+          <div class="user_name"><%= trip.user.nickname%></div>
+          </div>
+                    <div class="trip_image"><%= image_tag Post.find(trip.post_ids[0]).image.to_s %></div>
+          <div class="trip_content">
+          <div class="trip_title"><%= trip.title %></div>
+          <div class="trip_prefecture"><%= trip.prefecture %></div>
+          </div>
+                    <% end %>
+
+          </div>
           <% end %>
-          <%= link_to "/posts/#{post.id}" do %>
-            <table class="post-contents">
-              <div class="post-image"><%= image_tag post.image.to_s, size: '200x200' %></div>
-              <tr class="post-title">
-                <th>
-                  <p>Title</p>
-                </th>
-                <th>
-                  <%= simple_format(post.title) %>
-                </th>
-              </tr>
-              <tr class="post-time">
-                <th>
-                  <p>Time</p>
-                </th>
-                <th>
-                  <%= post.time.strftime("%m/%d %H:%M") %>
-                </th>
-              </tr>
-              <tr  class="post-text">
-                <th>
-                  <p>Place</p>
-                </th>
-                <th>
-                  <%= simple_format(post.place) %>
-                </th>
-              </tr>
-            </table>
-          <% end %>
-        </div>
-      <% end %>
-      </div>
-      <%= paginate(@posts) %>
+    </div>
     </div>
     <div class="contents" id="about">
       <h2>About</h2>
