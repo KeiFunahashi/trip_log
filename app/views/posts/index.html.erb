@@ -75,7 +75,7 @@
                     <div class="trip_image"><%= image_tag Post.find(trip.post_ids[0]).image.to_s %></div>
           <div class="trip_content">
           <div class="trip_title"><%= trip.title %></div>
-          <div class="trip_prefecture"><%= trip.prefecture %></div>
+          <div class="trip_prefecture"><%= Prefecture.find(trip.prefecture).name%></div>
           </div>
                     <% end %>
 

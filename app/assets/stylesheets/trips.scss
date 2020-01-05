@@ -23,8 +23,13 @@
         .post_detail {
             .post_text {
                 text-align: center;
-                height: 60%;
+                height: 50%;
                 font-size: 25px;
+            }
+            p {
+                height: 10%;
+                font-size: 10px;
+                text-align: end;
             }
             .post_time {
                 height: 10%;
