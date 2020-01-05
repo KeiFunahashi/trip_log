@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          has_many :bookmarks
          has_many :posts, through: :bookmarks
-         has_many :trips
-         has_many :posts      
+         has_many :trips, dependent: :destroy
+         has_many :posts
 
          has_many :relationships
          has_many :followings, through: :relationships, source: :follow

@@ -20,7 +20,11 @@ class TripsController < ApplicationController
 @trip = Trip.find(params[:id])
   end
   
-
+  def destroy
+    trip = Trip.find(params[:id])
+    trip.destroy
+  end
+  
   def trip_params
     params.require(:trip).permit(
     :prefecture,
