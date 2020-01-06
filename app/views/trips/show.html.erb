@@ -2,12 +2,24 @@
 <div class="trip_contents">
 <div class="trip_title"><p><%= @trip.title%></p></div>
 <div class="trip_prefecture"><p><%= Prefecture.find(@trip.prefecture).name%></p></div>
+
 </div>
 <div class="post_contents">
 <% @trip.posts.each do |post| %>
 <div class="post_content">
 <div class="post_image"><%= image_tag post.image.to_s%></div>
 <div class="post_detail">
+      <div class="bookmark-btn">
+        <% if !Bookmark.exists?(user_id:current_user.id,post_id:post.id) %>
+          <%= link_to post_add_path(post), class:"bookmark-add-btn",method: :post do%>
+            <i class="far fa-bookmark"></i>
+          <% end %>
+        <% else %>
+          <%= link_to post_add_path(post), class:"bookmark-remove-btn",method: :delete do%>
+            <i class="fas fa-bookmark"></i>
+          <% end %>
+        <% end %>
+      </div>
 <div class="post_place"><%= post.place%></div>
 <div class="post_time"><%= post.time.strftime("%Y-%m-%d %H:%M:%S") %></div>
 <% if current_user.id == @trip.user_id %><p><%= link_to '削除', "/posts/#{post.id}", method: :delete %></p><% end %>

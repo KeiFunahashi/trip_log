@@ -21,9 +21,12 @@
             padding: 20px 10px;
         }
         .post_detail {
+            .bookmark_btn {
+                height: 10%;
+            }
             .post_text {
                 text-align: center;
-                height: 50%;
+                height: 40%;
                 font-size: 25px;
             }
             p {
