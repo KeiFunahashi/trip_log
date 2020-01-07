@@ -95,7 +95,6 @@
 #trip {
     .trip_contents {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap-reverse;
         .trip_content--header {
             display: flex;
