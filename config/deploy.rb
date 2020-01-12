@@ -10,7 +10,8 @@ set :repo_url,  'git@github.com:KeiFunahashi/trip_log.git'
 
 # バージョンが変わっても共通で参照するディレクトリを指定
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
-set :linked_files, fetch(:linked_files, []).push("config/master.key")
+# set :linked_files, fetch(:linked_files, []).push("config/master.key")
+set :linked_files, %w{ config/credentials.yml.enc }
 set :rbenv_type, :user
 set :rbenv_ruby, '2.5.1' 
 
@@ -32,15 +33,28 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
   
-  desc 'upload master.key'#ここ注意
-  task :upload do
-    on roles(:app) do |host|
-      if test "[ ! -d #{shared_path}/config ]"
-        execute "mkdir -p #{shared_path}/config"
-      end
-      upload!('config/master.key', "#{shared_path}/config/master.key")#ここ注意
+#   desc 'upload master.key'#ここ注意
+#   task :upload do
+#     on roles(:app) do |host|
+#       if test "[ ! -d #{shared_path}/config ]"
+#         execute "mkdir -p #{shared_path}/config"
+#       end
+#       upload!('config/master.key', "#{shared_path}/config/master.key")#ここ注意
+#     end
+#   end
+#   before :starting, 'deploy:upload'
+#   after :finishing, 'deploy:cleanup'
+# end
+
+desc 'upload credentials.yml.enc'
+task :upload do
+  on roles(:app) do |host|
+    if test "[ ! -d #{shared_path}/config ]"
+      execute "mkdir -p #{shared_path}/config"
     end
+    upload!('config/credentials.yml.enc', "#{shared_path}/config/credentials.yml.enc")
   end
-  before :starting, 'deploy:upload'
-  after :finishing, 'deploy:cleanup'
+end
+before :starting, 'deploy:upload'
+after :finishing, 'deploy:cleanup'
 end
