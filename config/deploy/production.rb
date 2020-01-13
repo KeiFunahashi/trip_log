@@ -32,7 +32,7 @@ set :unicorn_rack_env, "production"
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 
-config.require_master_key = true
+# config.require_master_key = true
 
 # Custom SSH Options
 # ==================
