@@ -28,6 +28,8 @@ set :keep_releases, 5
 # secrets.yml用のシンボリックリンクを追加
 set :linked_files, %w{ config/master.key }
 
+set :linked_files, fetch(:linked_files, []).push("config/master.key")
+
 # 元々記述されていた after 「'deploy:publishing', 'deploy:restart'」以下を削除して、次のように書き換え
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
