@@ -96,7 +96,10 @@
       <div class="contents_boxs">
       <% @posts.each do |post| %>
       <div class="contents_box">
+              <%= link_to "/posts/#{post.id}" do %>
               <div class="post-image"><%= image_tag post.image.to_s, size: '200x200' %></div>
+                    <% end %>
+
       </div>
       <% end %>
       </div>
