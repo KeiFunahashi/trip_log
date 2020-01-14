@@ -15,8 +15,8 @@ Rails.application.routes.draw do
     post 'add' => 'bookmarks#create'
     delete '/add' => 'bookmarks#destroy'
   end
-  resources :news, only: [:new,:create]
-  resources :information, only: [:new,:create]
+  resources :news, only: [:new,:create,:show]
+  resources :information, only: [:new,:create,:show]
   resources :bookmarks, only: :index
   resources :favorite, only: :index
   resources :profiles, only:  :show

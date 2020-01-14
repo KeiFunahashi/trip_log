@@ -1,0 +1,16 @@
+<main class="inf_show-main">
+  <div class='main-contents'>
+
+  <div class='show-content'>
+    <div class="content-title">
+          <%= simple_format(@information.inftitle) %>
+    </div>
+  <div class="detail-content">
+    <div class="post-img"><%= image_tag @information.infimage.to_s %>)</div>
+      <div class="more">
+        <%= simple_format(@information.inftext) %>
+      </div>
+      </div>
+</div>
+    </div>
+</main>

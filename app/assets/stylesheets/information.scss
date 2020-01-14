@@ -58,3 +58,17 @@
         padding-top: 20px;
     }
 }
+
+.inf_show-main {
+    .content-title {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        font-size: 35px;
+    }
+    .detail-content {
+        display: flex;
+        margin: 20px;
+        width: auto;
+    }
+}
