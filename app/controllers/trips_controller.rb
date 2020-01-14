@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+  before_action :move_to_index
   before_action :authenticate_user!, only: [:main]
 
   def main
@@ -31,4 +32,9 @@ class TripsController < ApplicationController
     :title,
     posts_attributes: [:title, :time, :place, :image, :text ,user_id: current_user.id]).merge(user_id: current_user.id)
   end
+
+  def move_to_index
+    redirect_to new_user_session_path unless user_signed_in?
+  end
+  
 end
