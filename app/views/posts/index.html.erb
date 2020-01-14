@@ -104,19 +104,23 @@
     <div class="contents" id="news">
       <h2>News</h2>
       <% @news.each do |news| %>
-      <div class="contents_box">
-      <div class="news_image">
-      <%= image_tag news.newsimage.to_s %>
-      </div>
-      <div class="news_content">
-      <div class="news_content--title">
-      <p><%= news.newstitle %></p>
-      </div>
-            <div class="news_content--content">
-      <p><%= news.newscontent %></p>
-      </div>
-      </div>
-            </div>
+      <div class="news_contents">
+        <%= link_to "/news/#{news.id}" do %>
+        <div class="contents_box">
+                <div class="news_image">
+                        <%= image_tag news.newsimage.to_s %>
+                </div>
+                <div class="news_content">
+                        <div class="news_content--title">
+                                <p><%= news.newstitle %></p>
+                        </div>
+                        <div class="news_content--content">
+                                <p><%= news.newscontent %></p>
+                        </div>
+                </div>
+        </div>
+        <% end %>
+        </div>
       <% end %>
       <%= paginate(@news) %>
     </div>

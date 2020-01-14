@@ -1,0 +1,16 @@
+<main class="inf_show-main">
+  <div class='main-contents'>
+
+  <div class='show-content'>
+    <div class="content-title">
+          <%= simple_format(@news.newstitle) %>
+    </div>
+  <div class="detail-content">
+    <div class="post-img"><%= image_tag @news.newsimage.to_s %>)</div>
+      <div class="more">
+        <%= simple_format(@news.newscontent) %>
+      </div>
+      </div>
+</div>
+    </div>
+</main>
