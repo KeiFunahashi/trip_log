@@ -66,12 +66,15 @@
 <div class="trip_contents">
           <% @trip.each do |trip| %>
           <div class="trip_contents_detail">
-                    <%= link_to "/trips/#{trip.id}" do %>
+                    <%= link_to "/profiles/#{trip.user.id}" do %>
 
           <div class="trip_content--header">
                     <div class="trip_user--image"><%= image_tag trip.user.profileimg.to_s %></div>
           <div class="user_name"><%= trip.user.nickname%></div>
           </div>
+          <% end %>
+                              <%= link_to "/trips/#{trip.id}" do %>
+
                     <div class="trip_image"><%= image_tag Post.find(trip.post_ids[0]).image.to_s %></div>
           <div class="trip_content">
           <div class="trip_title"><%= trip.title %></div>
